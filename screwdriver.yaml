@@ -1,0 +1,10 @@
+shared:
+  image: node:8
+  steps:
+    - hello: echo hello
+
+jobs:
+  main:
+    requires: [~pr, ~commit]
+    steps:
+      - hello
